@@ -9,10 +9,10 @@ public class Customer {
     private List<Ticket> tickets;
     CashProvider cash;
 
-    public Customer(int id, CashProvider cash) {
+    public Customer(int id) {
         this.id = id;
         this.tickets = new ArrayList<>();
-        this.cash = cash;
+
     }
 
     public int getId() {

@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         CashProvider cash1 = new CashProvider(11111, 11111);
-        Customer customer1 = new Customer(1, cash1);
+        Customer customer1 = new Customer(1);
+        customer1.setCash(cash1);
         Ticket ticket1 = new Ticket(1,25.00,null, LocalDateTime.now());
         System.out.println(ticket1 + " " + customer1);
         customer1.cash.setAmount(1000);

@@ -19,8 +19,14 @@ public class TicketProvider {
     }
 
     public List<Ticket> getTicket(long rootNumber) {
-        // Логика получения билетов по номеру
-        return new ArrayList<>(); // Вернуть список найденных билетов
+        ArrayList listOfTickets = new ArrayList<>();
+        for (int i = 0; i < availableTickets.size(); i++) {
+            if (availableTickets.get(i).getRootNumber() == rootNumber){
+                listOfTickets.add(availableTickets.get(i));
+            }
+        }
+
+        return listOfTickets;
     }
 
     public boolean updateTicketStatus(Ticket ticket) {
